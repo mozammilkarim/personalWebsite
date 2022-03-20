@@ -1,0 +1,270 @@
+body{
+    margin: 0px 10px ;
+    box-sizing: border-box;
+}
+*{
+    scroll-behavior: smooth;
+}
+nav{
+    /* to stick the navBar at top */
+    position: sticky;
+    top: 0vh;
+    display: flex;
+    /* border: 2px solid black; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* margin: 10px 0; */
+    background-color: white;    
+    z-index: 2;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    background-color: #100f3a;;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0px;
+}
+.menuLink{
+    /* text-decoration: underline; */
+    color:#100f3a;
+    font-weight:600;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    text-decoration: none;
+}
+.menuLink:hover{
+    color: white;
+    background-color:#100f3a;
+}
+.general{
+    height: 80vh;
+    margin: 0;
+}
+.generalImg{
+    margin: 0;
+    height: 80vh;
+    background-size:cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    background-image: url('./WelcomeImg.jpg');
+}
+
+.freelanceWork{
+    display: flex;
+    color: white;
+    background-color: #8583e1;
+    position: relative;
+    top: 65vh;
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    width: fit-content;
+    left: 5vw;
+    z-index: 1;
+}
+.freelanceWork:hover{
+    color: white;
+    background-color: #100f3a;
+}
+.freelanceWork a{
+    background-color: #100f3a;
+    color: white;
+    padding: 5px;
+    margin: 0;
+}
+.generalInfo{
+    background-color: #100f3a;;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.generalInfo h2{
+    margin: 0;
+    padding: 5px;
+}
+.generalInfo div{
+    padding: 10px;
+}
+.desciption{
+    position: relative;
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 18px 32px 0 32px;
+    
+}
+.desciption h3,.desciption h2{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: #7a798c;
+}
+.desciption h2{
+    font-size: 8vw;
+    color:#100f3a;
+    font-weight: bold;
+}
+.desciption h5{
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.dDescription{
+    padding: 30px 0px;
+    margin: 0px;
+    color: #7a798c;
+}
+.dDescription h3{
+    position: relative;
+    top: 5px;
+    /* right: 5px; */
+}
+.dDescription p{
+    margin: 0;
+    padding-top: 10px;
+}
+.education img{
+    height: 30vh; margin: 10px 25px;
+    width: 20vw;
+}
+.education div{
+    padding: 0px 6px;
+}
+.menuExtended{
+    /* height: 80vh; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    display: none;
+    
+}
+.menuExtended ul{
+    margin: 0%;
+    background-color: white;
+    list-style: none;
+    text-align: end;
+    width:fit-content;
+}
+.menuExtended li{
+    padding: 10px;
+}
+.menuExtended a{
+    text-decoration: none;
+    color:#100f3a;
+    font-weight: 600;
+    font-size: 2.5vw;
+}
+#duplicateMenu{
+    padding: 5vh 0;
+}
+@media screen and (max-width: 480px) {
+    .menuExtended{
+        height: 40vh;
+    }
+    .desciption h5{
+        font-size: 1rem;
+    }
+    .education img{
+        height: 10vh; margin: 0px 5px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width:850px) {
+    .education img{
+        height: 15vh; margin: 0px 5px;
+    }
+    
+}
+@media screen and (min-width:500px) and (max-width:2000px){
+    *{
+        font-size: 30px;
+    }
+}
+.skillsBox{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+.skillBar{
+    width: 30vw;
+    display: block;
+    height: 6px;
+    background-color: white;
+    color: #7a798c;
+    stroke-dasharray: 100, 100;
+    stroke-dashoffset: 30;
+    /* border: 1px solid black; */
+}
+.skill{
+    margin: 1px 8px;
+    padding: 5px;
+}
+.skillBg{
+    height: 100%;
+    background-color:#100f3a;
+}
+#html{
+    width: 80%;  
+}
+#css{
+    width: 70%;
+}
+#js{
+    width: 55%;
+}
+#nodejs{
+    width: 50%;
+}
+#python{
+    width: 60%;
+}
+#react{
+    width: 50%;
+}
+#mongodb{
+    width: 65%;
+}
+#aws{
+    width: 95%;
+}
+#certs{
+    text-align: center;
+    box-shadow:0px 0px 4px 1.5px #100f3a;
+}
+#portfoliOptions{
+    padding: 4vh 0;
+    font-size: 3vw;
+}
+
+#portfoliOptions a{
+    text-decoration: none;
+    color: #7a798c;
+    margin: 0px 5px;
+}
+
+.lastStrip{
+    text-align: center;
+}
+.education{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+#allPortfolio{
+    /* width: 40px; */
+    height: 350px;
+    width: 350px;
+    border: 2px solid;
+    background-color: #7a798c;
+    border-radius: 5px;
+}
+#allPortfolio h5{
+    text-align: center;
+    color: #100f3a;
+}
+#allPortfolio img{
+    height: 90%;
+    width: 100%;
+}
