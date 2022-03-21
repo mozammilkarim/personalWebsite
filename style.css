@@ -5,58 +5,60 @@ body{
 *{
     scroll-behavior: smooth;
 }
+/* starting of navBar */
 nav{
-    /* to stick the navBar at top */
     position: sticky;
     top: 0vh;
     display: flex;
-    /* border: 2px solid black; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* margin: 10px 0; */
     background-color: white;    
     z-index: 2;
 }
+
 .dot{
     width: 10px;
     height: 10px;
     background-color: #100f3a;;
     border-radius: 5px;
     display: inline-block;
-    margin: 0px;
+    /* margin: 0px; */
 }
 .menuLink{
-    /* text-decoration: underline; */
+    top: 10px;
     color:#100f3a;
+    font-size: 40px;
     font-weight:600;
     position: absolute;
     right: 10px;
-    top: 25px;
     text-decoration: none;
 }
 .menuLink:hover{
     color: white;
     background-color:#100f3a;
 }
+/* end of navBar */
+/* starting of sticky image section */
 .general{
     height: 80vh;
-    margin: 0;
+    /* margin: 0; */
 }
+/* for sticky image */
 .generalImg{
-    margin: 0;
+    /* margin: 0; */
     height: 80vh;
     background-size:cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center; 
     background-image: url('./WelcomeImg.jpg');
 }
-
+/* freelance sticky strip on image */
 .freelanceWork{
+    /* margin: 0; */
     display: flex;
     color: white;
     background-color: #8583e1;
     position: relative;
     top: 65vh;
-    margin: 0;
     font-size: 18px;
     text-align: center;
     width: fit-content;
@@ -73,6 +75,7 @@ nav{
     padding: 5px;
     margin: 0;
 }
+/* general description in image */
 .generalInfo{
     background-color: #100f3a;;
     color: white;
@@ -87,12 +90,16 @@ nav{
 .generalInfo div{
     padding: 10px;
 }
+/* for general Info details */
+span{
+    font-size: 2vw;
+}
+/* individual sections like About starting */
 .desciption{
     position: relative;
     background-color: antiquewhite;
     margin: 0;
-    padding: 18px 32px 0 32px;
-    
+    padding: 18px 32px 0 32px;   
 }
 .desciption h3,.desciption h2{
     margin: 0;
@@ -110,6 +117,7 @@ nav{
     font-size: 2rem;
     font-weight: bold;
 }
+/* for brief idea in a particular section like about */
 .dDescription{
     padding: 30px 0px;
     margin: 0px;
@@ -118,7 +126,6 @@ nav{
 .dDescription h3{
     position: relative;
     top: 5px;
-    /* right: 5px; */
 }
 .dDescription p{
     margin: 0;
@@ -131,14 +138,13 @@ nav{
 .education div{
     padding: 0px 6px;
 }
+/* for extended menu that appears on click */
 .menuExtended{
-    /* height: 80vh; */
     position: absolute;
     right: 0;
     top: 0;
     margin: 0;
     display: none;
-    
 }
 .menuExtended ul{
     margin: 0%;
@@ -156,9 +162,15 @@ nav{
     font-weight: 600;
     font-size: 2.5vw;
 }
+/* for menu link that appears in extended menu */
 #duplicateMenu{
     padding: 5vh 0;
 }
+/* for font awesome icons */
+.fas,.fab{
+    font-size: 2vw;
+}
+/* for smart phones */
 @media screen and (max-width: 480px) {
     .menuExtended{
         height: 40vh;
@@ -169,18 +181,32 @@ nav{
     .education img{
         height: 10vh; margin: 0px 5px;
     }
+    .allPortfolio{
+        width: 30vw;
+        padding:5px 3vw;
+    }
+    .generalImg{
+        background-image: url('./Welcome2.jpg');
+    }
 }
+/* for tabs */
 @media screen and (min-width: 480px) and (max-width:850px) {
     .education img{
         height: 15vh; margin: 0px 5px;
     }
+    /* *{
+        font-size: 4vw;
+    } */
+    .allPortfolio {
+        padding: 6vh 8vw;
+    }
+    .menuLink{
+        font-size: 6vw;
+    }
     
 }
-@media screen and (min-width:500px) and (max-width:2000px){
-    *{
-        font-size: 30px;
-    }
-}
+
+/* for skill section */
 .skillsBox{
     display: flex;
     flex-wrap: wrap;
@@ -205,6 +231,7 @@ nav{
     height: 100%;
     background-color:#100f3a;
 }
+/* individual horizontal skill bars */
 #html{
     width: 80%;  
 }
@@ -229,6 +256,7 @@ nav{
 #aws{
     width: 95%;
 }
+/* certificate section */
 #certs{
     text-align: center;
     box-shadow:0px 0px 4px 1.5px #100f3a;
@@ -241,30 +269,45 @@ nav{
 #portfoliOptions a{
     text-decoration: none;
     color: #7a798c;
-    margin: 0px 5px;
+    margin: 0px 8vw;
+    margin-left: 0%;
 }
 
-.lastStrip{
-    text-align: center;
-}
+
 .education{
     display: flex;
     flex-direction: row;
     padding: 5px;
 }
-#allPortfolio{
-    /* width: 40px; */
-    height: 350px;
-    width: 350px;
-    border: 2px solid;
-    background-color: #7a798c;
+.allPortfolio{
+    display: inline-block;
+    width: 35vw;
     border-radius: 5px;
+    padding: 3vh 3vw;
+    padding-left: 0px;
 }
-#allPortfolio h5{
+.allPortfolio h5{
     text-align: center;
     color: #100f3a;
 }
-#allPortfolio img{
+.allPortfolio a{
+    width: 30vw;
+    height: 30vh;
+}
+.allPortfolio img{
     height: 90%;
     width: 100%;
+}
+.allPortfolio img:hover{
+    color: antiquewhite;
+    opacity: 0.5;
+}
+/* node that contains project details cards */
+#portfolioResult{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* last footer line */
+footer{
+    text-align: center;
 }
