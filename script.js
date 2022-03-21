@@ -67,6 +67,8 @@ const all = document.getElementById('all');
 const javaScript = document.getElementById('javaScript');
 const python = document.getElementById('python2');
 const frontEnd = document.getElementById('frontEnd');
+// portfolio Options array for changing style of clicked option
+const portfolioOptions = [all, javaScript, python, frontEnd];
 
 // now adding event listeners to all links/buttons
 // to dynamically present projects done
@@ -80,10 +82,46 @@ function createProjects(portfolioItem) {
     portfolioResult.appendChild(element);
 }
 
+// changing the styles of clicked portfolio option
+function clickOption(option) {
+    // changing style of only clicked option and 
+    // resetting all other options
+    portfolioOptions.forEach(element => {
+        if (element == option) {
+            option.style.color = 'rgb(6 6 6)';
+            option.style.backgroundColor = 'rgb(208 176 207)';
+            option.style.padding = '0px 5px';
+            option.style.borderRadius = '5px';
+        } else {
+            unclickOption(element);
+        }
+    });
+
+
+}
+// for changing unclicked(not clicked) option to be normal
+function unclickOption(option) {
+    option.style.color = '#7a798c';
+    option.style.backgroundColor = '';
+    option.style.padding = '0px';
+    option.style.borderRadius = '0px';
+}
+
+
+//initially show all category projects by default
+portfolioPro.forEach(portfolioItem => {
+    // adding all projects in portfolioResult node
+    createProjects(portfolioItem);
+});
+// initially all option is clicked and styled
+clickOption(all);
+
 // adding events to portfolio option links/buttons
 // to show their category projects
 all.addEventListener('click', (e) => {
     e.preventDefault();
+    // clicking only all option, changing its style
+    clickOption(all);
     // empty the portfolio result to show only clicked category results
     portfolioResult.innerHTML = ``;
     portfolioPro.forEach(portfolioItem => {
@@ -94,6 +132,9 @@ all.addEventListener('click', (e) => {
 // for java script projects
 javaScript.addEventListener('click', (e) => {
     e.preventDefault();
+    // clicking only java script option, 
+    // changing its style
+    clickOption(javaScript);
     // empty the portfolio result
     portfolioResult.innerHTML = ``;
     portfolioPro.forEach(portfolioItem => {
@@ -107,6 +148,8 @@ javaScript.addEventListener('click', (e) => {
 // for Python projects
 python.addEventListener('click', (e) => {
     e.preventDefault();
+    // clicking only this option, changing its style
+    clickOption(python);
     // empty the portfolio result
     portfolioResult.innerHTML = ``;
     portfolioPro.forEach(portfolioItem => {
@@ -120,6 +163,8 @@ python.addEventListener('click', (e) => {
 // for Front End projects
 frontEnd.addEventListener('click', (e) => {
     e.preventDefault();
+    // clicking only this option, changing its style
+    clickOption(frontEnd);
     // empty the portfolio result
     portfolioResult.innerHTML = ``;
     portfolioPro.forEach(portfolioItem => {
